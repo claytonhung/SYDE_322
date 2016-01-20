@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<header>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <script>
+      var ans;
+            function toAdd() {
+                  var x = document.getElementById('x_value').value;
+                  var y = document.getElementById('y_value').value;
+                  ans = Number(x) + Number(y);
+
+                  var element = document.getElementById("output");
+                  element.innerHTML = "result = " + ans;
+            }
+
+            function toSubtract() {
+                  var x = document.getElementById('x_value').value;
+                  var y = document.getElementById('y_value').value;
+                  ans = Number(x) - Number(y);
+
+                  var element = document.getElementById("output");
+                  element.innerHTML = "result = " + ans;
+            }
+
+            function toMultiply() {
+                  var x = document.getElementById('x_value').value;
+                  var y = document.getElementById('y_value').value;
+                  ans = Number(x) / Number(y);
+
+                  var element = document.getElementById("output");
+                  element.innerHTML = "result = " + ans;
+            }
+
+            function toDivide() {
+                  var x = document.getElementById('x_value').value;
+                  var y = document.getElementById('y_value').value;
+                  ans = Number(x) * Number(y);
+
+                  var element = document.getElementById("output");
+                  element.innerHTML = "result = " + ans;
+            }
+      </script>
+</header>
+<body>
+      <h1 id="test" onclick="changeText()">My SYDE 322 test script</h1>
+      <script>
+      // the following gets executed immediately
+      document.getElementById("test").innerHTML = "Hello World!";
+      </script>
+      <p>x= <input type="text" id="x_value" value=""></p>
+      <p>y= <input type="text" id="y_value" value=""></p>
+      <p id="output">result = </p>
+      <p><input type="button" value="addition" onclick="toAdd()"></p>
+      <p><input type="button" value="subtraction" onclick="toSubtract()"></p>
+      <p><input type="button" value="multiplication" onclick="toMultiply()"></p>
+      <p><input type="button" value="division" onclick="toDivide()"></p>
+
+</body>
+</html>
