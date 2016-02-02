@@ -1,19 +1,13 @@
+//Clayton Hung 20432053
+//Bix Deng 20413850
+
 <!DOCTYPE html>
 <html>
 <header>
       <meta http-equiv="content-type" content="text/html;charset=utf-8" />
       <script>
-
-            var videos = ["https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1", "https://www.youtube.com/embed/9bZkp7q19f0?autoplay=1", "https://www.youtube.com/embed/GNndX9qua1o?autoplay=1"];
-
-            function changeText() { // this gets executed when called
-                  var element = document.getElementById("test");
-                  if (element.innerHTML.match("SYDE 322")) { //contains "SYDE 322"
-                        element.innerHTML = "Hello World!";
-                  } else {
-                        element.innerHTML = "My SYDE 322 test script";
-                  }
-            }
+            //store links of 3 videos
+            var videos = ["https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1", "https://www.youtube.com/embed/9bZkp7q19f0?autoplay=1", "https://www.youtube.com/embed/78Hwa_yguqs?autoplay=1"];
 
             function toVideo1() {
                   document.open();
@@ -22,6 +16,7 @@
                   document.write('<p><input type="button" \
                   value="Go Back" onclick="window.history.back()"></p>');
                   document.write('</body></html');
+                  document.close();
             }
             function toVideo2() {
                   document.open();
@@ -30,50 +25,31 @@
                   document.write('<p><input type="button" \
                   value="Go Back" onclick="window.history.back()"></p>');
                   document.write('</body></html');
+                  document.close();
             }
             function toVideo3() {
                   document.open();
                   document.write('<!DOCTYPE html><html><body>');
-                  document.write('<iframe width="420" height="315" src="https://www.youtube.com/embed/GNndX9qua1o?autoplay=1"></iframe>')
+                  document.write('<iframe width="420" height="315" src="https://www.youtube.com/embed/78Hwa_yguqs?autoplay=1"></iframe>')
                   document.write('<p><input type="button" \
                   value="Go Back" onclick="window.history.back()"></p>');
                   document.write('</body></html');
+                  document.close();
             }
             function toRandomVid() {
+                  //get random number between 0 and 2
                   var randomNumber = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
                   var youtubeLink = videos[randomNumber];
 
-                  document.open();
-                  document.write('<!DOCTYPE html><html><body>');
-                  document.write('<iframe width="420" height="315" src=' + youtubeLink + "'></iframe>'")
-                  document.write('<p><input type="button" \
-                  value="Go Back" onclick="window.history.back()"></p>');
-                  document.write('</body></html');
-            }
-
-            function writeText() { // generate a new page
-                  document.open();
-                  document.write('<!DOCTYPE html><html><body>');
-                  document.write('<h2 id="test2" style="color:blue"> \
-                  My first fully-generated HTML page!</h2>');
-                  document.write('<p><input type="button" \
-                  value="Go Back" onclick="window.history.back()"></p>');
-                  document.write('</body></html>');
-                  document.close();
+                  window.open(youtubeLink);
             }
       </script>
 </header>
 <body>
-      <h1 id="test" onclick="changeText()">My SYDE 322 test script</h1>
-      <script>
-      // the following gets executed immediately
-      document.getElementById("test").innerHTML = "Hello World!";
-      </script>
+      <h1 id="test" onclick="changeText()">My favourite videos</h1>
       <p><input type="button" value="rick astley" onclick="toVideo1()"></p>
       <p><input type="button" value="gangnam style" onclick="toVideo2()"></p>
-      <p><input type="button" value="egg song" onclick="toVideo3()"></p>
-      <p><input type="button" \
-      value="Generate New Page" onclick="writeText()"></p>
+      <p><input type="button" value="milk song" onclick="toVideo3()"></p>
       <p><input type="button" value="random" onclick="toRandomVid()"></p>
 
 </body>
