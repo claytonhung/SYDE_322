@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+    <script src="main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    Guest Registration
+    <div>
+      Name: <input type="text" id="name"><br>
+      Address: <input type="text" id="address"><br>
+      <input type="button" value="Register" onclick="saveGuest()">
+    </div>
+<br>
+<br>
+<br>
+<div> Search for Available Rooms
+      hotel Name <input type="text" id="hotelName"></br>
+      City <input type="text" id="city"></br>
+      Price <input type="text" id="price"></br>
+      Room Type <input type="text" id="type"></br>
+      start date <input type="text" id="start"></br>
+      end date <input type="text" id="end"></br>
+      <input type="button" value="Search" onclick="queryRooms()">
+    </div>
+<br>
+<br>
+<br>
+    <div> Create Booking
+      hotel ID <input type="text" id="hotelId"></br>
+      room No <input type="text" id="roomNo"></br>
+      guest ID <input type="text" id="guestId"></br>
+      start date <input type="text" id="startDate"></br>
+      end date <input type="text" id="endDate"></br>
+      <input type="button" value="Book" onclick="bookHotel()">
+    </div>
+  </body>
+</html>
+
+
+
+
